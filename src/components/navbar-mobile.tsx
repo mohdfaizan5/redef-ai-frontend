@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { GoTasklist } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
 import { Star } from "coolshapes-react"
+import { RiTodoFill } from "react-icons/ri";
+import { IoCalendarNumber } from "react-icons/io5";
 
 const MobileNavbar = ({ className }: { className?: string }) => {
   const path = usePathname();
@@ -27,6 +29,16 @@ const MobileNavbar = ({ className }: { className?: string }) => {
       >
         <GoTasklist size={20} /> Tasks
       </Link>
+      <Link
+      
+        href={"/calendar"}
+        className={cn(
+          "flex h-16 px-4 flex-col gap-1 items-center text-primary/70 justify-center text-sm",
+          path === "/calendar" && "text-primary scale-105 font-bold"
+        )}
+      >
+        <IoCalendarNumber size={20} /> Calendar
+      </Link>
 
 
       <Link
@@ -42,10 +54,19 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           index={7}
           noise={true}
           size={70}
-          
+
         />
       </Link>
 
+      <Link
+        href={"/habits"}
+        className={cn(
+          "flex h-16 px-4 flex-col gap-1 items-center text-primary/70 justify-center text-sm",
+          path === "/habits" && "text-primary scale-105 font-bold"
+        )}
+      >
+        <RiTodoFill size={20} /> Habits
+      </Link>
       <Link
         href={"/goals"}
         className={cn(
@@ -53,7 +74,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           path === "/goals" && "text-primary scale-105 font-bold"
         )}
       >
-        <GoGoal size={20} /> Goals2
+        <GoGoal size={20} /> Goals
       </Link>
     </nav>
   );

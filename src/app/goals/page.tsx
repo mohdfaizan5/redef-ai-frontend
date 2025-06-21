@@ -14,6 +14,18 @@ import mongoose from 'mongoose'
 import { AnimatedProgress } from '@/components/animated-progress'
 export const dynamic = 'force-dynamic'; // or 'force-static'
 
+type GoalType = {
+    id: string
+    name: string;
+    description?: string;
+    targetValue: number;
+    value: number;
+    startDate?: Date; // Optional start date
+    endDate?: Date; // Optional end date
+    createdAt?: Date;
+}
+
+
 
 const page = async () => {
     await connectDB()
