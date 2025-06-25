@@ -6,6 +6,7 @@ import React from 'react'
 const page = async () => {
   await connectDB()
   const db = mongoose.connection.db; // 👈 Get raw database
+  
   // const collection = db.collection('redef'); // 👈 Your existing collection name
 
   // const todos = await collection.find({}).toArray();

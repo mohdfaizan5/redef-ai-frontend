@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Link from "next/link";
 import AIVoiceComponent from "@/components/ai-voice-component";
 import MobileNavbar from "@/components/navbar-mobile";
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
 
           {children}
           <MobileNavbar />
+        <Toaster richColors/>
          
         </ThemeProvider>
       </body>

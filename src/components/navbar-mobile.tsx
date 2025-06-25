@@ -42,7 +42,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
 
 
       <Link
-        href={"/ai"}
+        href={"/"}
         className={cn(
           "flex h-16 px-4 flex-col -mt-9 gap-1 items-center text-primary/70 justify-center text-sm",
           path === "/" && "text-primary scale-105 font-bold"
